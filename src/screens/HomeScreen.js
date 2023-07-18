@@ -6,10 +6,10 @@ import BannerSlider from '../components/BannerSlider';
 
 export default function HomeScreen({ navigation }) {
   return (
-    <View style={styles.headerButton}>
+    <View style={styles.headerContainer}>
       <HeaderComponent props={navigation} />
-      <View>
-        <ScrollView>
+      <View style={{flex:1, paddingBottom:85}}>
+        <ScrollView showsVerticalScrollIndicator="false">
           <View style={styles.componentStyle}>
             <BannerSlider />
           </View>
@@ -23,7 +23,7 @@ export default function HomeScreen({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-  headerButton:{
+  headerContainer:{
     flex:1,
   },
   componentStyle: {

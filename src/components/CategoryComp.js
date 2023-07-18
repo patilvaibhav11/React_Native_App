@@ -1,57 +1,97 @@
 import { Image, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
 
 export default function CategoryComp() {
   return (
     <>
-      <View style={styles.categoryTitleContainer}>
-        <View style={styles.categoryTitle}>
-          <Text style={styles.title}>Category Name</Text>
+      <View>
+        <View style={styles.categoryTitleContainer}>
+          <View style={styles.categoryTitle}>
+            <Text style={styles.title}>Category Name</Text>
+          </View>
         </View>
-        <View style={styles.categorySelectDate}>
-          <TextInput
-            allowFontScaling={false}
-            value="11-12-2000"
-          />
-        </View>
+        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+          <View style={styles.categoryContainer}>
+            <View style={styles.container}>
+              <View>
+                <View>
+                  <Image source={require('../assets/CategoryImage/images.png')} style={styles.imageStyle}></Image>
+                </View>
+                <View style={styles.textContaner}>
+                  <Text style={styles.headerText}>ABP Maza</Text>
+                  <Text style={styles.shortDiscription}>Lorem ipsum, dolor sit amet consectetur..</Text>
+                </View>
+              </View>
+            </View>
+            <View style={styles.container}>
+              <View>
+                <View>
+                  <Image source={require('../assets/CategoryImage/images.png')} style={styles.imageStyle}></Image>
+                </View>
+                <View style={styles.textContaner}>
+                  <Text style={styles.headerText}>ABP Maza</Text>
+                  <Text style={styles.shortDiscription}>Lorem ipsum, dolor sit amet consectetur..</Text>
+                </View>
+              </View>
+            </View>
+            <View style={styles.container}>
+              <View>
+                <View>
+                  <Image source={require('../assets/CategoryImage/images.png')} style={styles.imageStyle}></Image>
+                </View>
+                <View style={styles.textContaner}>
+                  <Text style={styles.headerText}>ABP Maza</Text>
+                  <Text style={styles.shortDiscription}>Lorem ipsum, dolor sit amet consectetur.Lorem ipsum, dolor sit amet consectetur...</Text>
+                </View>
+              </View>
+            </View>
+          </View>
+        </ScrollView>
       </View>
-      <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
-        <View style={styles.categoryContainer}>
-          <View style={styles.container}>
-            <View>
-              <View>
-                <Image source={require('../assets/CategoryImage/images.png')} style={styles.imageStyle}></Image>
-              </View>
-              <View style={styles.textContaner}>
-                <Text style={styles.headerText}>ABP Maza</Text>
-                <Text style={styles.shortDiscription}>Lorem ipsum, dolor sit amet consectetur..</Text>
-              </View>
-            </View>
-          </View>
-          <View style={styles.container}>
-            <View>
-              <View>
-                <Image source={require('../assets/CategoryImage/images.png')} style={styles.imageStyle}></Image>
-              </View>
-              <View style={styles.textContaner}>
-                <Text style={styles.headerText}>ABP Maza</Text>
-                <Text style={styles.shortDiscription}>Lorem ipsum, dolor sit amet consectetur..</Text>
-              </View>
-            </View>
-          </View>
-          <View style={styles.container}>
-            <View>
-              <View>
-                <Image source={require('../assets/CategoryImage/images.png')} style={styles.imageStyle}></Image>
-              </View>
-              <View style={styles.textContaner}>
-                <Text style={styles.headerText}>ABP Maza</Text>
-                <Text style={styles.shortDiscription}>Lorem ipsum, dolor sit amet consectetur.Lorem ipsum, dolor sit amet consectetur...</Text>
-              </View>
-            </View>
+      <View>
+        <View style={styles.categoryTitleContainer}>
+          <View style={styles.categoryTitle}>
+            <Text style={styles.title}>Category Name</Text>
           </View>
         </View>
-      </ScrollView>
+        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
+          <View style={styles.categoryContainer}>
+            <View style={styles.container}>
+              <View>
+                <View>
+                  <Image source={require('../assets/CategoryImage/images.png')} style={styles.imageStyle}></Image>
+                </View>
+                <View style={styles.textContaner}>
+                  <Text style={styles.headerText}>ABP Maza</Text>
+                  <Text style={styles.shortDiscription}>Lorem ipsum, dolor sit amet consectetur..</Text>
+                </View>
+              </View>
+            </View>
+            <View style={styles.container}>
+              <View>
+                <View>
+                  <Image source={require('../assets/CategoryImage/images.png')} style={styles.imageStyle}></Image>
+                </View>
+                <View style={styles.textContaner}>
+                  <Text style={styles.headerText}>ABP Maza</Text>
+                  <Text style={styles.shortDiscription}>Lorem ipsum, dolor sit amet consectetur..</Text>
+                </View>
+              </View>
+            </View>
+            <View style={styles.container}>
+              <View>
+                <View>
+                  <Image source={require('../assets/CategoryImage/images.png')} style={styles.imageStyle}></Image>
+                </View>
+                <View style={styles.textContaner}>
+                  <Text style={styles.headerText}>ABP Maza</Text>
+                  <Text style={styles.shortDiscription}>Lorem ipsum, dolor sit amet consectetur.Lorem ipsum, dolor sit amet consectetur...</Text>
+                </View>
+              </View>
+            </View>
+          </View>
+        </ScrollView>
+      </View>
     </>
   )
   // ../assets/CategoryImage/images.png
@@ -60,7 +100,8 @@ export default function CategoryComp() {
 const styles = StyleSheet.create({
   categoryTitleContainer: {
     flexDirection: 'row',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    alignItems:'center'
   },
   categoryTitle: {
     margin: 5,
